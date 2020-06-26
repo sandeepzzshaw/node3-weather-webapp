@@ -9,7 +9,7 @@ const forcast=(Latitude,Longitude,callback)=>{
         }else if(body.error){
             callback('Unable to find the location',undefined)
         }else{
-            callback(undefined, body.current.weather_descriptions +' .It is currently ' + body.current.temperature +' degree out. It feels like '+ body.current.feelslike+' degree ')
+            callback(undefined, body.current.weather_descriptions +' .It is currently ' + body.current.temperature +' degree out. It feels like '+ body.current.feelslike+' degree. Humidity ='+body.current.humidity)
 
         }
         
